@@ -6,26 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="Telemedicina hospital Moscati">
     <meta name="keywords" content="Telemedicina Moscati, Hospital Moscati, Hospital En Queretaro">
-    <meta name="author" content="TI Moscati">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#002554">
-    <meta name="robots" content="index"/>
-    <meta property="og:type" content="website">
     <meta property="og:site_name" content="Telemedicina">
     <meta property="og:title" content="Telemedicina | Hospital Moscati">
     <meta property="og:url" content="https://moscati.com.mx/telemedicina.html">
+    <meta name="author" content="TI Moscati">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#002554">
+    <meta name="robots" content="index"/>
     <!--END META TAGS-->
 
+
     <!--Style sheets and imports-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script rel="preconnect" src="https://kit.fontawesome.com/ebc4682b90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/desingTelemedicina/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/desingTelemedicina/css/style.css">
+    <script rel="preload" src="https://kit.fontawesome.com/ebc4682b90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="asssetTelemedicina/stepper.css">
+    <link rel="stylesheet" href="asssetTelemedicina/style.css">
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <script src="asssetTelemedicina/stepper.js"></script>
     <!--END Style sheets and imports-->
 
     <!--Site main config-->
     <title>Hospital Moscati</title>
     <link rel="icon" href="img/Favicon-48.png" media="(prefers-color-scheme:no-preference)" type="image/x-icon">
-    <link rel="icon" href="img/Favicon-48b.png"  media="(prefers-color-scheme:dark)" type="image/x-icon">
+    <link rel="icon" href="img/Favicon-48b.png" media="(prefers-color-scheme:dark)" type="image/x-icon">
     <link rel="icon" href="img/Favicon-48.png" media="(prefers-color-scheme:light)" type="image/x-icon">
     <!--END Site main config-->
 </head>
@@ -80,30 +85,183 @@
 <main class="container-fluid" id="container-fluid">
     <div class="row">
         <div class="col-12">
-            <div class="stepper" id="stepper2">
-                <div class="steps-container">
-                    <div class="steps">
-                        <div class="step" icon="fa fa-pencil-alt" id="1"></div>
-                        <div class="step" icon="fa fa-pencil-alt" id="2"></div>
-                        <div class="step" icon="fa fa-pencil-alt" id="3"></div>
-                        <div class="step" icon="fa fa-pencil-alt" id="4"></div>
+            <!-- Section -->
+            <section class="mdl-stepper-demo">
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <!-- STEPPER -->
+                        <ul class="mdl-stepper" id="demo-stepper-non-linear">
+                            <!-- Step 1 -->
+                            <li class="mdl-step mdl-step-cards">
+                        <span class="mdl-step__label">
+                          <span class="mdl-step__title">
+                            <span class="mdl-step__title-text">
+                                SELECCIONA A TU DOCTOR
+                            </span>
+                            <span class="mdl-step__title-message">
+                                Comienza por la especialidad
+                            </span>
+                          </span>
+                        </span>
+                                <!-- Step 1 Contenido -->
+                                <div class="mdl-step__content">
+                                    <!-- APPOINTMENT FORM -->
+                                    <div id="appointment-form-holder" class="text-center">
+                                        <!-- Select Especialidad -->
+                                        <div>
+                                            <select id="optionsSelectEspecialidad" class="dataSelect"
+                                                    aria-label="Especialidad"></select>
+                                        </div>
+                                        <!-- END Select Espacialidad -->
+
+                                        <!-- DIV Ciclado Doctores-->
+                                        <div class="container">
+                                            <div class="row" id="imgSelectDoctor">
+                                            </div>
+                                        </div>
+                                        <!-- END DIV Ciclado Doctores-->
+                                    </div>
+                                </div>
+                                <!-- END Step 1 Contenido -->
+
+                                <!-- Step 1 Buttons -->
+                                <div class="mdl-step__actions">
+                                    <input type="button" onclick="nextStep()"
+                                           class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised"
+                                           data-stepper-next value="Continuar">
+                                </div>
+                                <!-- END Step 1 Buttons -->
+                            </li>
+                            <!-- END Step 1 -->
+
+                            <!-- Step 2 -->
+                            <li class="mdl-step">
+                        <span class="mdl-step__label">
+                            <span class="mdl-step__title">
+                                <span class="mdl-step__title-text">
+                                    INTRODUCCE TUS DATOS
+                                </span>
+                            </span>
+                        </span>
+                                <!-- Step 2 Contenido -->
+                                <div class="mdl-step__content">
+                                    <!-- Campos de Contacto -->
+                                    <div>
+                                        <input id="idDoctorCheck" type="text" name="idDoctorCheck" class="dataInput"
+                                               placeholder="ID doctor" required hidden aria-label="Id Doctor">
+                                    </div>
+                                    <div>
+                                        <input id="nombre_Paciente" oninput="changeInputsTeleme()" type="text"
+                                               name="name" class="dataInput" placeholder="Introduce tu nombre *"
+                                               required aria-label="Nombre Paciente">
+                                    </div>
+                                    <div>
+                                        <input id="input-email" oninput="changeInputsTeleme()" type="email" name="email"
+                                               class="dataInput" placeholder="Introduce tu email *" required
+                                               aria-label="Correo Electronico">
+                                    </div>
+                                    <div>
+                                        <input id="input-phone" oninput="changeInputsTeleme()" type="tel" name="phone"
+                                               class="dataInput" placeholder="Introduce tu número telefónico *"
+                                               maxlength="10" required aria-label="Número Telefónico">
+                                    </div>
+                                    <div>
+                                        <textarea id="input-message" oninput="changeInputsTeleme()" class="dataArea"
+                                                  name="message" rows="5" placeholder="Datos adicionales"
+                                                  aria-label="Datos adicionales"></textarea>
+                                    </div>
+                                    <!-- END Campos de Contacto -->
+                                </div>
+                                <!-- END Step 2 Contenido -->
+
+                                <!-- Step 2 Buttons -->
+                                <div class="mdl-step__actions">
+                                    <input type="button" onclick="nextStep()"
+                                           class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised"
+                                           data-stepper-next value="Continuar">
+                                    <input type="button" onclick="backStep()"
+                                           class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel
+                                           value="Regresar">
+                                </div>
+                                <!-- END Step 2 Buttons -->
+                            </li>
+                            <!-- END Step 2 -->
+
+                            <!-- Step 3 -->
+                            <li class="mdl-step">
+                        <span class="mdl-step__label">
+                          <span class="mdl-step__title">
+                            <span class="mdl-step__title-text">
+                                SELECCIONA TU HORARIO
+                            </span>
+                          </span>
+                        </span>
+                                <!-- Step 3 Contenido -->
+                                <div class="mdl-step__content">
+                                    <div>
+                                        <input id="fecha" type="datetime-local" name="fecha_Cita" class="dataDate"
+                                               onchange="agendaFun()" placeholder="Fecha de Cita"
+                                               aria-label="Fecha de cita">
+                                    </div>
+                                    <div id="message-error"></div>
+                                </div>
+                                <!-- END Step 3 Contenido -->
+
+                                <!-- Step 3 Buttons -->
+                                <div class="mdl-step__actions">
+                                    <input type="button" onclick="nextStep()"
+                                           class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored mdl-button--raised"
+                                           data-stepper-next value="Continuar">
+                                    <input type="button" onclick="backStep()"
+                                           class="mdl-button mdl-js-button mdl-js-ripple-effect" data-stepper-cancel
+                                           value="Regresar">
+                                </div>
+                                <!-- END Step 3 Buttons -->
+                            </li>
+                            <!-- END Step 3 -->
+
+                            <!-- Step 4 -->
+                            <li class="mdl-step">
+                        <span class="mdl-step__label">
+                          <span class="mdl-step__title">
+                            <span class="mdl-step__title-text">
+                                PROCEDE AL PAGO
+                            </span>
+                          </span>
+                        </span>
+                                <!-- Step 4 Contenido -->
+                                <div class="mdl-step__content" style="height: 100%;">
+                                    <ul class="card-wrapper">
+                                        <li class="card-details">
+                                            <div id="details-cita-content"></div>
+                                            <h3>Cita medica virtual</h3>
+                                            <div id="nombre-medico"></div>
+                                            <div id="fecha-cita"></div>
+                                            <p><strong>Duracion de la cita: </strong> 30 min.</p>
+                                            <div id="total-cita">Total:</div>
+                                            <div class="corner-2" style="margin-top: 30px;">
+                                                <div class="text-center button-container">
+                                                    <div id="paypal-button-container"></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- END Step 4 Contenido -->
+
+                                <!-- Step 4 Buttons -->
+                                <div class="mdl-step__actions">
+                                </div>
+                                <!-- END Step 4 Buttons -->
+                            </li>
+                            <!-- END Step 4 -->
+                        </ul>
+                        <!-- END STEPPER -->
                     </div>
                 </div>
-                <div class="stepper-content-container">
-                    <div class="stepper-content fade-in" stepper-label="1">
-                        <div>Step 1</div>
-                    </div>
-                    <div class="stepper-content fade-in" stepper-label="2">
-                        <div>Step 2</div>
-                    </div>
-                    <div class="stepper-content fade-in" stepper-label="3">
-                        <div>Step 3</div>
-                    </div>
-                    <div class="stepper-content fade-in" stepper-label="4">
-                        <div>Step 4</div>
-                    </div>
-                </div>
-            </div>
+            </section>
+            <!-- END Section -->
         </div>
     </div>
 </main>
@@ -113,15 +271,16 @@
 <footer class="container-fluid site-footer">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
                 <h6>Ubicación</h6>
                 <div class="map-responsive">
-                    <iframe rel="preconnect" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14929.711412544395!2d-100.42849465!3d20.6928436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359d148505b49%3A0xcffedc73d636ebb8!2sHospital%20Moscati!5e0!3m2!1ses-419!2smx!4v1653424381032!5m2!1ses-419!2smx"
+                    <iframe rel="preload"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14929.711412544395!2d-100.42849465!3d20.6928436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d359d148505b49%3A0xcffedc73d636ebb8!2sHospital%20Moscati!5e0!3m2!1ses-419!2smx!4v1653424381032!5m2!1ses-419!2smx"
                             frameborder="0" title="Ubicación HospitalMoscati">
                     </iframe>
                 </div>
             </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
                 <h6>Acerca de</h6>
                 <ul class="footer-links">
                     <li class="footer-item footer-expand">
@@ -151,7 +310,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
                 <h6>Contáctanos</h6>
                 <ul class="footer-links">
                     <li class="footer-item footer-expand">
@@ -337,8 +496,9 @@
 
 <!--IMPORTS SCRIPTS-->
 <script src="js/menuNavegation.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/jQuery-v3.6.0.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/telemedicina/getEspecialidades.js"></script>
 <script>
     $(document).ready(function () {
         $('#up-page').click(function () {
@@ -355,9 +515,19 @@
         });
     });
 </script>
+<!-- script -->
 <script>
-    const stepper = document.querySelector('#stepper');
-    new CDB.Stepper(stepper);
+    function nextStep(){
+        let element = document.querySelector('.mdl-stepper#demo-stepper-non-linear');
+        let stepper = element.MaterialStepper;
+        stepper.next();
+    }
+
+    function backStep(){
+        let element = document.querySelector('.mdl-stepper#demo-stepper-non-linear');
+        let stepper = element.MaterialStepper;
+        stepper.back();
+    }
 </script>
 <!--END IMPORTS SCRIPTS-->
 </body>

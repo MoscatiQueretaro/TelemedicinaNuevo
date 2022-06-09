@@ -437,12 +437,12 @@ a {
 }
 
 .front-page {
-    background: url("../img/Recepcion.jpg") no-repeat center;
+    background: url("../../../img/Recepcion.jpg") no-repeat center;
     background-size: cover;
     height: 30rem;
 }
 .middle-page {
-    background: url("../img/consultorio_2.jpg") no-repeat center;
+    background: url("../../../img/consultorio_2.jpg") no-repeat center;
     background-size: cover;
     height: 20rem;
 }
