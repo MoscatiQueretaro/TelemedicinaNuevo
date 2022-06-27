@@ -26,3 +26,9 @@ containerFluid.addEventListener('click', function () {
   document.body.classList.toggle('nav-is-showed');
   document.body.classList.remove('nav-is-toggled');
 });
+
+const siteFooter = document.getElementById('site-footer');
+siteFooter.addEventListener('click', function () {
+  document.body.classList.toggle('nav-is-showed');
+  document.body.classList.remove('nav-is-toggled');
+});
