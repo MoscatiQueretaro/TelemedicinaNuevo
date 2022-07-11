@@ -65,7 +65,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active carousel-background">
                             <div class="row">
-                                <div class="animation-top col-8 col-md-8 col-sm-8 d-flex justify-content-between flex-column carousel-padding">
+                                <div class="animation-top col-md-8 col-sm-8 col-8 d-flex justify-content-between flex-column carousel-padding">
                                     <h3 class="m-0 text-uppercase carousel-title">Realiza aquí tu preregistro</h3>
                                     <p class="carousel-text mt-4 mb-4">
                                         En el Hospital Moscati estamos comprometidos con
@@ -123,38 +123,54 @@
 
         <!--Metrics Container-->
         <div class="row">
-            <div class="col-12 pt-2 pb-2 px-0" style="background-color: var(--bs-dark-blue-8)">
-                <div class="d-flex mt-2 mb-2">
-                    <div class="m-auto">
-                        <div class="d-flex flex-column justify-content-center align-items-center">
-                            <span class="material-icons" style="color: var(--bs-white); font-size: 4.5rem">masks</span>
-                            <p class="counter mt-3 mb-3"></p>
-                            <p style="color: var(--bs-white); font-size: var(--bs-size-14)" class="text-center m-0">Numero doctores en hospital</p>
-                        </div>
-                    </div>
-                    <div class="m-auto">
-                        <div class="d-flex flex-column justify-content-center align-items-center">
-                            <span class="material-icons" style="color: var(--bs-white); font-size: 4.5rem">medical_services</span>
-                            <p class="counter mt-3 mb-3"></p>
-                            <p style="color: var(--bs-white); font-size: var(--bs-size-14)" class="text-center m-0">Numero doctores en hospital</p>
-                        </div>
-                    </div>
-                    <div class="m-auto">
-                        <div class="d-flex flex-column justify-content-center align-items-center">
-                            <span class="material-icons" style="color: var(--bs-white); font-size: 4.5rem">personal_injury</span>
-                            <p class="counter mt-3 mb-3"></p>
-                            <p style="color: var(--bs-white); font-size: var(--bs-size-14)" class="text-center m-0">Numero pacientes atendidos</p>
-                        </div>
-                    </div>
+            <div class="col-12 metric-background d-flex flex-row justify-content-around flex-md-wrap py-2 px-3 py-sm-2 py-md-4">
+                <div class="metric-container">
+                    <i class="fa-solid fa-user-doctor metric-icons m-auto"></i>
+                    <span class="metric-counter m-auto" data-val="500">000</span>
+                    <p class="metric-text m-auto">Número doctores</p>
                 </div>
+                <div class="metric-container">
+                    <i class="fa-solid fa-bed metric-icons m-auto"></i>
+                    <span class="metric-counter m-auto" data-val="150">000</span>
+                    <p class="metric-text m-auto">Número habitaciones</p>
+                </div>
+                <div class="metric-container">
+                    <i class="fa-solid fa-person-breastfeeding metric-icons m-auto"></i>
+                    <span class="metric-counter m-auto" data-val="1000">000</span>
+                    <p class="metric-text m-auto">Número pacientes atendidos</p>
+                </div>
+
+<!--                <div class="d-flex mt-2 mb-2">-->
+<!--                    <div class="m-auto">-->
+<!--                        <div class="d-flex flex-column justify-content-center align-items-center">-->
+<!--                            <i class="fa-solid fa-user-doctor metric-icons"></i>-->
+<!--                            <p class="counter mt-3 mb-3"></p>-->
+<!--                            <p class="text-center m-0 metric-text">Número doctores en hospital</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="m-auto">-->
+<!--                        <div class="d-flex flex-column justify-content-center align-items-center">-->
+<!--                            <i class="fa-solid fa-bed metric-icons"></i>-->
+<!--                            <p class="counter mt-3 mb-3"></p>-->
+<!--                            <p class="text-center m-0 metric-text">Número habitaciones en hospital</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="m-auto">-->
+<!--                        <div class="d-flex flex-column justify-content-center align-items-center">-->
+<!--                            <span class="material-icons metric-icons">personal_injury</span>-->
+<!--                            <p class="counter mt-3 mb-3"></p>-->
+<!--                            <p class="text-center m-0 metric-text">Número pacientes atendidos</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
         </div>
         <!--END Metrics Container-->
 
         <!--Carousel Promotions-->
         <div class="row">
-            <div class="col-12 p-0" style="background-color: var(--bs-light-gray)">
-                <h3 class="text-center mt-2" style="font-size: var(--bs-size-36); color: var(--bs-dark-blue-8); font-weight: var(--bs-weight-600); letter-spacing: .4rem">Nuestras Promociones</h3>
+            <div class="col-12 p-0 carousel-background-white">
+                <h3 class="text-center mt-2 carousel-title-promo">Nuestras Promociones</h3>
                 <div id="carouselPromo" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselPromo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -162,31 +178,31 @@
                         <button type="button" data-bs-target="#carouselPromo" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner mb-5">
-                        <div class="carousel-item active carousel-background">
+                        <div class="carousel-item active carousel-background-white">
                             <div class="row">
                                 <div class="col-12 col-md-12 col-sm-12 p-0 d-flex justify-content-center">
                                     <img src="img/Doctor_1.jpg" alt="" class="d-block w-75 rounded-4">
-                                    <div class="position-absolute" style="top: 85%; right: 5%; width: 25%; z-index: 99;">
+                                    <div class="position-absolute btn-promo-position">
                                         <a href="#" class="btn btn-light-blue">Ver todas</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item carousel-background">
+                        <div class="carousel-item carousel-background-white">
                             <div class="row">
                                 <div class="col-12 col-md-12 col-sm-12 p-0 d-flex justify-content-center">
                                     <img src="img/Doctor_1.jpg" alt="" class="d-block w-75 rounded-4">
-                                    <div class="position-absolute" style="top: 85%; right: 5%; width: 25%; z-index: 99;">
+                                    <div class="position-absolute btn-promo-position">
                                         <a href="#" class="btn btn-light-blue">Ver todas</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item carousel-background">
+                        <div class="carousel-item carousel-background-white">
                             <div class="row">
                                 <div class="col-12 col-md-12 col-sm-12 p-0 d-flex justify-content-center">
                                     <img src="img/Doctor_1.jpg" alt="" class="d-block w-75 rounded-4">
-                                    <div class="position-absolute" style="top: 85%; right: 5%; width: 25%; z-index: 99;">
+                                    <div class="position-absolute btn-promo-position">
                                         <a href="#" class="btn btn-light-blue">Ver todas</a>
                                     </div>
                                 </div>
@@ -208,32 +224,291 @@
 
         <!--Hospital Container-->
         <div class="row">
-            <div class="col-6" style="background-color: var(--bs-white); padding: 2rem; margin: auto">
-                <h1 class="mb-4 text-uppercase carousel-title text-center">Hospital Moscati</h1>
-                <h3 class="mb-3 mt-3" style="font-size: var(--bs-size-24); color: var(--bs-dark-blue-8);">Excelecia y pasión por la vida</h3>
-                <p class="mt-3 mb-3" style="text-align: justify; color: var(--bs-dark-blue-8); font-size: var(--bs-size-18); line-height: 1.5">
+            <div class="col-12 col-md-6 col-sm-12 p-4 carousel-background order-last order-sm-last order-md-first d-flex flex-column justify-content-around">
+                <h1 class="text-uppercase text-center hospital-title my-4 my-md-2">Hospital Moscati</h1>
+                <h3 class="hospital-subtitle my-4 my-md-2">Excelecia y pasión por la vida</h3>
+                <p class=" hospital-text my-4 my-md-2">
                     Respaldados con una trayectoria de 30 años de brindar
                     la mejor atención médica al estado, surge el Hospital Moscati,
                     un hospital que cuenta con la tecnología, el equipo y los servicios
                     necesarios para cuidar tu salud.
                 </p>
-                <div class="d-flex justify-content-center">
-                    <a href="#" class="btn btn-light-blue mt-3"> Recorido virtual</a>
-                </div>
+                <a href="#" class="btn btn-light-blue w-75 mx-auto"> Recorido virtual</a>
             </div>
-            <div class="col-6 p-0">
+            <div class="col-md-6 col-sm-12 col-12 p-0 carousel-background">
                 <img src="img/MoscatiHospital.jpg" alt="" class="d-block w-100">
             </div>
         </div>
         <!--END Hospital Container-->
+
+        <!--Insurance Container-->
+        <div class="row">
+            <div class="col-12 carousel-background-white p-0">
+                <h3 class="text-center my-4 carousel-title-promo">Trabajamos con las mejores aseguradoras</h3>
+            </div>
+            <div class="col-12 p-0">
+                <div class="slider">
+                    <div class="slide-track">
+                        <a href="">
+                            <div class="slide">
+                                <img src="img/aseguradoras/allianz.png" alt=""/>
+                            </div>
+                        </a>
+                        <div class="slide"><img src="img/aseguradoras/banorte.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/bxt.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/axxa.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/banobras.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/bupa.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/geoblue.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/inbursa.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/mapfre.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/prevem.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/metlife.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/redbridge.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/sisnova.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/umbrella.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/zurich.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/general%20de%20seguros.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/grupo%20sura.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/hir%20seguros.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/seguro%20el%20potosi.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/medica%20azul.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/seguros%20atlas.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/seguros%20monterrey.png" alt=""/></div>
+                        <div class="slide"><img src="img/aseguradoras/thona%20seguros.png" alt=""/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END Insurance Container-->
     </main>
     <!--END CONTAINER MAIN-->
 
-    <!--FOOTER-->
-    <footer class="container-fluid site-footer" id="site-footer">
-        <div class="container">
+    <section class="our-services mx-4">
+        <h3 class="text-center carousel-title-promo">Nuestros servicios</h3>
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <div>
+                            <h4>Hospitalización</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                En el Hospital Moscati buscamos dar un trato cálido y amable a todos nuestros pacientes,
+                                para ofrecerte el mejor servicio. Conoce nuestras diferentes opciones: habitaciones estándar,
+                                suites y master suites.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html/#v-pills-hospitalization-tab">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-bed-pulse"></i>
+                        </div>
+                        <div>
+                            <h4>Terapia Intensiva</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                El área de terapia intensiva ubicada en el piso 2 del Hospital Moscati es de alta especialidad
+                                médica con equipos de última generación, únicos en el país.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html/#v-pills-therapy-tab">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                        </div>
+                        <div>
+                            <h4>Imagen</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                En el departamento de imagen del Hospital Moscati contamos con equipos de última generación de
+                                la marca General Electric, con el fin de obtener imágenes de alta resolución y realizar el
+                                diagnóstico correcto.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html/#v-pills-humanized-tab">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-capsules"></i>
+                        </div>
+                        <div>
+                            <h4>Farmacia</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                Te ofrece una amplia variedad de medicamentos de referencia, alta especialidad y genéricos de
+                                laboratorios reconocidos.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <div>
+                            <h4>Laboratorio</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                El laboratorio de análisis clínicos del Hospital Moscati cuenta con equipo de última generación
+                                el cual garantiza la validez y seguridad de los estudios solicitados el servicio está disponible
+                                las 24 horas del día los 365 días del año.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div>
+                            <h4>Óptica</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                En la Óptica del Hospital Moscati ubicada en la planta baja podrás encontrar las mejores para
+                                el cuidado de tu salud visual.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <div>
+                            <h4>Hemodinamia</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                En el Hospital Moscati contamos con una sala de hemodinamia de última generación cuya tecnología
+                                de vanguardia y su personal especializado, permite realizar procedimientos diagnósticos y terapéuticos.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="material-icons">emergency</i>
+                        </div>
+                        <div>
+                            <h4>Urgencias</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                El departamento de urgencias cuenta con personal especializado las 24 horas del día los 365 días del año.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html">
+                                Ver más <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-sm-12">
+                    <div class="box-shadow d-flex flex-column justify-content-between">
+                        <div class="icon">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                        <div>
+                            <h4>Cafetería</h4>
+                        </div>
+                        <div class="m-auto">
+                            <p>
+                                Cafetería Benevento ubicada en planta baja a un costado de la óptica.
+                                Nuestros horarios:
+                                Lunes a viernes 8:30 am - 19:00 pm.
+                                Sabado y domingo 8:30 am - 15:00 pm.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="servicos.html">
+                                Ver más <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--    <section>-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-12 carousel-background-white d-flex flex-column justify-content-center">-->
+<!--                    <h3 class="text-center carousel-title-promo">Redes sociales</h3>-->
+<!--                    <div id="fb-root">-->
+<!--                        <div class="fb-page" data-href="https://www.facebook.com/Moscatiqro/"-->
+<!--                             data-tabs="timeline" data-width="500" data-height="800" data-small-header="false"-->
+<!--                             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">-->
+<!--                            <blockquote cite="https://www.facebook.com/Moscatiqro/" class="fb-xfbml-parse-ignore">-->
+<!--                                <a href="https://www.facebook.com/Moscatiqro/">Hospital Moscati</a>-->
+<!--                            </blockquote>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+    <!--FOOTER-->
+    <footer class="site-footer" id="site-footer">
+        <div class="container-fluid">
+            <div class="row mx-4">
+                <div class="col-12 col-md-4 col-sm-12">
                     <h6>Ubicación</h6>
                     <div class="map-responsive">
                         <iframe rel="preload"
@@ -242,7 +517,7 @@
                         </iframe>
                     </div>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="col-12 col-md-4 col-sm-12">
                     <h6>Acerca de</h6>
                     <ul class="footer-links">
                         <li class="footer-item footer-expand">
@@ -272,7 +547,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="col-12 col-md-4 col-sm-12">
                     <h6>Contáctanos</h6>
                     <ul class="footer-links">
                         <li class="footer-item footer-expand">
@@ -292,22 +567,22 @@
                         </li>
                         <li class="footer-item footer-expand">
                             <a class="footer-link footer-expand-link" href="#">
-                                Boulevard, Av. de las Ciencias 2058 Querétaro
+                                Boulevard de las Ciencias. 2058, Querétaro, Qro.
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <hr>
+            <hr class="mx-4">
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-xxl-8 col-xl-8 col-lg-8 col-md-8 col-sm-12 d-flex text-center justify-content-start align-items-center footer-links justify-content-center justify-content-md-start justify-content-sm-center">
-                    <p class="copyright-text ">Hospital Moscati 2022 &copy; Todos los Derechos Reservados.
+        <div class="container-fluid">
+            <div class="row mx-4">
+                <div class="col-12 col-md-8 col-sm-12 d-flex text-center justify-content-start align-items-center footer-links justify-content-center justify-content-md-start justify-content-sm-center">
+                    <p class="copyright-text ">Hospital Moscati 2022&copy; Todos los Derechos Reservados.
                         <a href="#">TI Moscati</a>
                     </p>
                 </div>
-                <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 d-flex justify-content-end align-items-center justify-content-center justify-content-md-end justify-content-sm-center">
+                <div class="col-12 col-md-4 col-sm-12 d-flex justify-content-end align-items-center justify-content-center justify-content-md-end justify-content-sm-center">
                     <ul class="social-icons">
                         <li>
                             <a class="facebook" href="#">
@@ -471,11 +746,13 @@
     <!--END NAVEGATION MENU-->
 
     <!--IMPORTS SCRIPTS-->
-    <script rel="preload" src="https://kit.fontawesome.com/ebc4682b90.js" crossorigin="anonymous"></script>
+    <script rel="preload" src="https://kit.fontawesome.com/2ba8359609.js" crossorigin="anonymous"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v14.0" nonce="QZa04XX1"></script>
     <script src="js/menuNavegation.js"></script>
     <script src="js/jQuery-v3.6.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/upPage.js"></script>
+    <script src="js/Counter.js"></script>
     <!--END IMPORTS SCRIPTS-->
 </body>
 </html>
